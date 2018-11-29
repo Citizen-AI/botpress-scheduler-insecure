@@ -445,7 +445,7 @@ module.exports = {
   }(),
 
   ready: function ready(bp) {
-    var router = bp.getRouter('botpress-scheduler');
+    var router = bp.getRouter('botpress-scheduler', { auth: false });
 
     var catchError = function catchError(res) {
       return function (err) {
